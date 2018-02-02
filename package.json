@@ -1,0 +1,29 @@
+{
+    "name": "callbag-from",
+    "version": "1.0.0",
+    "description": "Convert a Promise to a callbag listenable source",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jadbox/callbag-from.git"
+    },
+    "scripts": {
+        "test": "tape test.js"
+    },
+    "author": "https://twitter.com/jadbox",
+    "license": "MIT",
+    "keywords": [
+        "callbag"
+    ],
+    "devDependencies": {
+        "tape": "^4.8.0"
+    },
+    "dependencies": {
+        "callbag-from-event": "^1.0.0",
+        "callbag-from-iter": "^1.0.0",
+        "callbag-from-obs": "^1.0.0",
+        "callbag-from-promise": "^1.0.0",
+        "install": "^0.10.4",
+        "npm": "^5.6.0"
+    }
+}
