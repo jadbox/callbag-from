@@ -6,8 +6,7 @@ Convert a Promise, Event, Observable, or Iterable to a callbag listenable source
 
 ## examples
 
-Convert an Event
-See https://github.com/staltz/callbag-from-event
+Convert an Event (https://github.com/staltz/callbag-from-event)
 
 ```js
 const fromEvent = require('callbag-from-event');
@@ -19,8 +18,7 @@ observe(x => console.log(x)(source); // MouseEvent ...
                                      // MouseEvent ...
 ```
 
-Convert a Promise
-see https://github.com/staltz/callbag-from-promise
+Convert a Promise (https://github.com/staltz/callbag-from-promise)
 
 ```js
 const fromPromise = require('callbag-from-promise');
@@ -34,8 +32,7 @@ const source = fromPromise(
 observe(user => console.log(user.name))(source); // Leanne Graham
 ```
 
-Convert an Observable:
-See https://github.com/staltz/callbag-from-obs
+Convert an Observable (https://github.com/staltz/callbag-from-obs)
 
 ```js
 const Rx = require('rxjs');
@@ -50,8 +47,7 @@ observe(x => console.log(x)(source); // 0
                                      // 3
 ```
 
-Convert an Iterable:
-See https://github.com/staltz/callbag-from-iter
+Convert an Iterable (https://github.com/staltz/callbag-from-iter)
 
 ```js
 const fromIter = require('callbag-from-iter');
