@@ -1,6 +1,6 @@
 # callbag-from
 
-Convert a Promise, Event, Observable, or Iterable to a callbag listenable source. This simple wraps existing convertion utilities and autodetects which one to use.
+Convert a Promise, Event, Observable, or Iterable to a callbag listenable source. This simply wraps existing conversion utilities and autodetects which one to use.
 
 `npm install callbag-from`
 
