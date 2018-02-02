@@ -9,10 +9,10 @@ Convert a Promise, Event, Observable, or Iterable to a callbag listenable source
 Convert an Event (https://github.com/staltz/callbag-from-event)
 
 ```js
-const from = require('callbag-from');
+const fromAny = require('callbag-from');
 const observe = require('callbag-observe');
 
-const source = from(document.body, 'click');
+const source = fromAny(document.body, 'click');
 
 observe(x => console.log(x)(source); // MouseEvent ...
                                      // MouseEvent ...
