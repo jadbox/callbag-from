@@ -9,10 +9,10 @@ Convert a Promise, Event, Observable, or Iterable to a callbag listenable source
 Convert an Event (https://github.com/staltz/callbag-from-event)
 
 ```js
-const fromEvent = require('callbag-from-event');
+const from = require('callbag-from');
 const observe = require('callbag-observe');
 
-const source = fromEvent(document.body, 'click');
+const source = from(document.body, 'click');
 
 observe(x => console.log(x)(source); // MouseEvent ...
                                      // MouseEvent ...
@@ -21,10 +21,10 @@ observe(x => console.log(x)(source); // MouseEvent ...
 Convert a Promise (https://github.com/staltz/callbag-from-promise)
 
 ```js
-const fromPromise = require('callbag-from-promise');
+const from = require('callbag-from');
 const observe = require('callbag-observe');
 
-const source = fromPromise(
+const source = from(
   fetch('http://jsonplaceholder.typicode.com/users/1')
     .then(res => res.json())
 );
@@ -36,10 +36,10 @@ Convert an Observable (https://github.com/staltz/callbag-from-obs)
 
 ```js
 const Rx = require('rxjs');
-const fromObs = require('callbag-from-obs');
+const from = require('callbag-from');
 const observe = require('callbag-observe');
 
-const source = fromObs(Rx.Observable.interval(1000).take(4));
+const source = from(Rx.Observable.interval(1000).take(4));
 
 observe(x => console.log(x)(source); // 0
                                      // 1
@@ -50,10 +50,10 @@ observe(x => console.log(x)(source); // 0
 Convert an Iterable (https://github.com/staltz/callbag-from-iter)
 
 ```js
-const fromIter = require('callbag-from-iter');
+const from = require('callbag-from');
 const iterate = require('callbag-iterate');
 
-const source = fromIter([10, 20, 30, 40]);
+const source = from([10, 20, 30, 40]);
 
 source(0, iterate(x => console.log(x)); // 10
                                         // 20
