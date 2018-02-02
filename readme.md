@@ -14,8 +14,8 @@ const observe = require('callbag-observe');
 
 const source = fromAny(document.body, 'click');
 
-observe(x => console.log(x)(source); // MouseEvent ...
-                                     // MouseEvent ...
+observe(x => console.log(x))(source); // MouseEvent ...
+                                      // MouseEvent ...
 ```
 
 Convert a Promise (https://github.com/staltz/callbag-from-promise)
@@ -41,10 +41,10 @@ const observe = require('callbag-observe');
 
 const source = fromAny(Rx.Observable.interval(1000).take(4));
 
-observe(x => console.log(x)(source); // 0
-                                     // 1
-                                     // 2
-                                     // 3
+observe(x => console.log(x))(source); // 0
+                                      // 1
+                                      // 2
+                                      // 3
 ```
 
 Convert an Iterable (https://github.com/staltz/callbag-from-iter)
