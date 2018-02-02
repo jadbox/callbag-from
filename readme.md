@@ -21,10 +21,10 @@ observe(x => console.log(x)(source); // MouseEvent ...
 Convert a Promise (https://github.com/staltz/callbag-from-promise)
 
 ```js
-const from = require('callbag-from');
+const fromAny = require('callbag-from');
 const observe = require('callbag-observe');
 
-const source = from(
+const source = fromAny(
   fetch('http://jsonplaceholder.typicode.com/users/1')
     .then(res => res.json())
 );
@@ -36,10 +36,10 @@ Convert an Observable (https://github.com/staltz/callbag-from-obs)
 
 ```js
 const Rx = require('rxjs');
-const from = require('callbag-from');
+const fromAny = require('callbag-from');
 const observe = require('callbag-observe');
 
-const source = from(Rx.Observable.interval(1000).take(4));
+const source = fromAny(Rx.Observable.interval(1000).take(4));
 
 observe(x => console.log(x)(source); // 0
                                      // 1
@@ -50,10 +50,10 @@ observe(x => console.log(x)(source); // 0
 Convert an Iterable (https://github.com/staltz/callbag-from-iter)
 
 ```js
-const from = require('callbag-from');
+const fromAny = require('callbag-from');
 const iterate = require('callbag-iterate');
 
-const source = from([10, 20, 30, 40]);
+const source = fromAny([10, 20, 30, 40]);
 
 source(0, iterate(x => console.log(x)); // 10
                                         // 20
